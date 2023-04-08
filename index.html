@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trote Solidário UniFACEF</title>
-    <link rel="stylesheet" href="assets/styles.css" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,11 +16,25 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Scripts -->
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <nav>
       <div class="inner-nav">
-        <img src="assets/logo.png" alt="Logo do Trote Solidário 2023" />
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Logo do Trote Solidário 2023" />
+        </a>
         <div class="menu">
           <div class="menu-item">
             <a href="#">Regras</a>
@@ -38,6 +54,42 @@
         </div>
       </div>
     </nav>
-    <script src="assets/script.js"></script>
+    <div style="height: 700px"></div>
+    <footer>
+      <div class="inner-footer">
+        <div class="social-links">
+          <a
+            href="https://github.com/gabrielassed/trote-solidario-unifacef"
+            target="_blank"
+          >
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+          <a
+            href="https://www.instagram.com/trotesolidariounifacef/"
+            target="_blank"
+          >
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a href="https://www.youtube.com/@tvunifacef" target="_blank">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a href="https://www.linkedin.com/school/uni-facef/" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </div>
+        <div class="description">
+          Feito por alunos da Turma VII de Bacharelado em Engenharia de Software
+          do
+          <a href="http://www.unifacef.com.br" target="_blank">Uni-FACEF</a>
+          <ul>
+            <li>Felipe Jorge Battarra</li>
+            <li>Gabriel David Assed</li>
+            <li>Gabriel Felipe Monteiro</li>
+            <li>Richardy Gabriel Rodrigues da Costa</li>
+            <li>Samuel Schisari Demacq Lago</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

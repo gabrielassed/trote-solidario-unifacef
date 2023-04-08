@@ -14,7 +14,6 @@ nav {
 }
 
 .inner-nav {
-  padding: 0 3px;
   margin: 0 auto;
   width: 75%;
   display: flex;
@@ -41,4 +40,32 @@ nav {
 .inner-nav a:hover {
   color: blue;
   transition: all 0.1s;
+}
+
+footer {
+  background-color: lightblue;
+  padding: 30px;
+  box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+.inner-footer {
+  width: 75%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner-footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.inner-footer .social-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
 }
