@@ -42,6 +42,11 @@ nav {
   transition: all 0.1s;
 }
 
+.carousel {
+  width: 90%;
+  margin: 10px auto;
+}
+
 footer {
   background-color: lightblue;
   padding: 30px;
