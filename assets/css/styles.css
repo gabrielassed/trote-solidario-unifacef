@@ -42,9 +42,82 @@ nav {
   transition: all 0.1s;
 }
 
+.inner-nav a.active {
+  color: blue;
+}
+
 .carousel {
   width: 90%;
   margin: 10px auto;
+}
+
+.content {
+  max-width: 800px;
+  margin: 10px auto;
+
+  text-align: justify;
+}
+
+.content p {
+  margin: 15px 0px;
+}
+
+.content .underline {
+  text-decoration: underline;
+}
+
+.content .center {
+  text-align: center;
+}
+
+.content h1 {
+  text-transform: uppercase;
+}
+
+.content table {
+  width: 100%;
+}
+
+.content table td,
+.content table th {
+  padding: 20px 30px;
+  border: 1px solid black;
+}
+
+.content table th {
+  text-align: center;
+}
+
+.content table th.header {
+  background-color: blue;
+  text-transform: uppercase;
+  color: white;
+}
+
+.content table .orange {
+  background-color: orange;
+}
+
+.content table .red {
+  background-color: red;
+  color: white;
+}
+
+.content table .purple {
+  background-color: purple;
+  color: white;
+}
+
+.content table .yellow {
+  background-color: yellow;
+}
+
+.content table .green {
+  background-color: green;
+}
+
+.content table.small-table td {
+  padding: 5px;
 }
 
 footer {
