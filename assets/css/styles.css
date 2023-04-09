@@ -13,6 +13,11 @@ nav {
   box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.1);
 }
 
+hr {
+  width: 100%;
+  margin: 10px 0px;
+}
+
 .inner-nav {
   margin: 0 auto;
   width: 75%;
@@ -54,12 +59,11 @@ nav {
 .content {
   max-width: 800px;
   margin: 10px auto;
-
-  text-align: justify;
 }
 
 .content p {
   margin: 15px 0px;
+  text-align: justify;
 }
 
 .content .underline {
@@ -70,12 +74,26 @@ nav {
   text-align: center;
 }
 
-.content h1 {
+.content .muted {
+  font-size: small;
+}
+
+.content .bold {
+  font-weight: bold;
+}
+
+.content h1,
+.content h2 {
   text-transform: uppercase;
+  margin: 10px 0px;
 }
 
 .content table {
   width: 100%;
+}
+
+.content tbody.striped tr:nth-child(odd) {
+  background-color: #c0c0c0;
 }
 
 .content table td,
@@ -120,6 +138,17 @@ nav {
   padding: 5px;
 }
 
+.content .callout {
+  background-color: #dbe5f1;
+  padding: 10px 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.content .callout.lightyellow {
+  background-color: #edefd5;
+}
+
 footer {
   background-color: lightblue;
   padding: 30px;
@@ -146,4 +175,31 @@ footer {
   text-decoration: none;
   color: black;
   font-size: 24px;
+}
+
+/* https://stackoverflow.com/a/27279246 */
+.summary {
+  display: flex;
+}
+
+.summary .left,
+.summary .right {
+  flex: 1 0 auto;
+}
+
+.summary .dots {
+  flex: 0 1 auto;
+  margin: 0 5px;
+  overflow: hidden;
+}
+
+.dots::before {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  content: '. . . . . . . . . . . . . . . . . . . . '
+    '. . . . . . . . . . . . . . . . . . . . '
+    '. . . . . . . . . . . . . . . . . . . . '
+    '. . . . . . . . . . . . . . . . . . . . ';
 }
