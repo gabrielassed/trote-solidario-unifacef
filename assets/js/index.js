@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $('.carousel').slick({
     autoplay: true,
-    dots: true,
+    dots: false,
     adaptiveHeight: true,
   });
 });

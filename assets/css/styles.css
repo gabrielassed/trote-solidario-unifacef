@@ -51,6 +51,13 @@ hr {
   color: blue;
 }
 
+body {
+  background-image: url('/assets/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+}
+
 .carousel {
   width: 90%;
   margin: 10px auto;
@@ -59,6 +66,10 @@ hr {
 .content {
   max-width: 800px;
   margin: 10px auto;
+
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .content p {
@@ -80,6 +91,10 @@ hr {
 
 .content .bold {
   font-weight: bold;
+}
+
+.content .text-blue {
+  color: #548dd4;
 }
 
 .content h1,
