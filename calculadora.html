@@ -96,6 +96,7 @@
             id="qtdKitsVeteranos"
             name="qtdKitsVeteranos"
             min="0"
+            max="0"
           />
         </label>
         <h2>Doação de Sangue</h2>
@@ -215,7 +216,7 @@
             + Adicionar
           </button>
         </div>
-        <div class="extra-points"></div>
+        <div id="extra-points"></div>
         <h3>Incluir Penalizações Extras</h3>
         <p>
           Use o botão abaixo para incluir penalizações extras não caracterizadas
@@ -227,12 +228,13 @@
             + Adicionar
           </button>
         </div>
-        <div class="extra-penalties"></div>
+        <div id="extra-penalties"></div>
         <div class="btn-container">
           <button type="submit">Calcular</button>
         </div>
       </form>
-      <template>
+      <div id="result"></div>
+      <template id="extra-points">
         <div class="input-container">
           <input type="text" placeholder="Descrição" />
           <input type="number" placeholder="Pontuação" />
@@ -286,5 +288,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="assets/js/calculator.js"></script>
   </body>
 </html>
