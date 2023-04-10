@@ -7,18 +7,60 @@ function makeRow(description, points) {
     `;
 }
 
+function btnRemoveEvent(event) {
+  // Deleta o ponto extra em que o botão está
+  const target = event.target;
+
+  target.parentNode.remove();
+}
+
+function makeExtraPoint() {
+  const inputContainer = document.createElement('div');
+  inputContainer.classList.add('input-container');
+
+  const inputDescription = document.createElement('input');
+  inputDescription.setAttribute('type', 'text');
+  inputDescription.setAttribute('placeholder', 'Descrição');
+
+  const inputPoints = document.createElement('input');
+  inputPoints.setAttribute('type', 'number');
+  inputPoints.setAttribute('placeholder', 'Acréscimo/Decréscimo');
+
+  const btnRemove = document.createElement('button');
+  btnRemove.addEventListener('click', btnRemoveEvent);
+  btnRemove.classList.add('button');
+  btnRemove.setAttribute('type', 'button');
+  btnRemove.textContent = 'Remover';
+
+  inputContainer.appendChild(inputDescription);
+  inputContainer.appendChild(inputPoints);
+  inputContainer.appendChild(btnRemove);
+
+  return inputContainer;
+}
+
 function main() {
   const form = document.forms['point-calculator'];
-  const kitsExtras = document.getElementById('kitsExtras');
-  const qtdKitsVeteranos = document.getElementById('qtdKitsVeteranos');
+
+  const qtdConjuntos = form.elements.qtdConjuntos;
+  const kitsExtras = form.elements.kitsExtras;
+  const qtdKitsVeteranos = form.elements.qtdKitsVeteranos;
+
+  const btnAddExtraPoints = document.getElementById('addExtraPoints');
+  const extraPointsContainer = document.getElementById('extra-points');
 
   // Alterar a quantidade de kits extras sempre que o input de conjuntos mudar seu valor
-  form.elements.qtdConjuntos.addEventListener('input', function () {
-    const kitsAtuais = Number(form.elements.qtdConjuntos.value);
+  qtdConjuntos.addEventListener('input', function () {
+    const kitsAtuais = Number(qtdConjuntos.value);
     const extras = kitsAtuais > 80 ? kitsAtuais - 80 : 0;
 
     kitsExtras.textContent = extras;
     qtdKitsVeteranos.setAttribute('max', extras);
+  });
+
+  btnAddExtraPoints.addEventListener('click', function () {
+    const container = makeExtraPoint();
+    extraPointsContainer.appendChild(container);
   });
 
   form.addEventListener('submit', function (e) {
@@ -172,6 +214,21 @@ function main() {
       totalPoints += 1000;
       relatorio += makeRow('Animação e Caracterização da Equipe', 1000);
     }
+
+    const extraPoints =
+      extraPointsContainer.querySelectorAll('.input-container');
+    extraPoints.forEach((node) => {
+      const inputDescription = node.querySelector('[type="text"]');
+      const inputPoints = node.querySelector('[type="number"]');
+
+      const description = inputDescription.value;
+      const points = Number(inputPoints.value);
+
+      if (!description || !points) return;
+
+      totalPoints += points;
+      relatorio += makeRow(description, points);
+    });
 
     relatorio += `
             </tbody>

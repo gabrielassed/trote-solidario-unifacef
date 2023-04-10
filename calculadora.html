@@ -205,11 +205,11 @@
           Houve animação e caracterização por parte da equipe
         </label>
         <h2>Extras</h2>
-        <h3>Incluir Pontuações Extras</h3>
         <p>
-          Use o botão abaixo para incluir pontuações extras não caracterizadas
-          anteriormente, coloque a descrição no campo da esquerda e o valor em
-          pontos no campo da direita
+          Use o botão abaixo caso queira incluir pontuações ou penalizações
+          extras não categorizadas anteriormente, coloque a descrição no campo
+          da esquerda e o valor em pontos no campo da direita (se for uma
+          penalização, colocar um valor negativo)
         </p>
         <div class="btn-container">
           <button id="addExtraPoints" type="button" class="button">
@@ -217,30 +217,11 @@
           </button>
         </div>
         <div id="extra-points"></div>
-        <h3>Incluir Penalizações Extras</h3>
-        <p>
-          Use o botão abaixo para incluir penalizações extras não caracterizadas
-          anteriormente, coloque a descrição no campo da esquerda e o decréscimo
-          em pontos no campo da direita
-        </p>
-        <div class="btn-container">
-          <button id="addExtraPenalties" type="button" class="button">
-            + Adicionar
-          </button>
-        </div>
-        <div id="extra-penalties"></div>
         <div class="btn-container">
           <button type="submit">Calcular</button>
         </div>
       </form>
       <div id="result"></div>
-      <template id="extra-points">
-        <div class="input-container">
-          <input type="text" placeholder="Descrição" />
-          <input type="number" placeholder="Pontuação" />
-          <button class="button">Remover</button>
-        </div>
-      </template>
     </div>
     <footer>
       <div class="inner-footer">
