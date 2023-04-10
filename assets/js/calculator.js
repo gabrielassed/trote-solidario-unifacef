@@ -43,8 +43,9 @@ function main() {
   const form = document.forms['point-calculator'];
 
   const qtdConjuntos = form.elements.qtdConjuntos;
-  const kitsExtras = form.elements.kitsExtras;
   const qtdKitsVeteranos = form.elements.qtdKitsVeteranos;
+
+  const kitsExtras = document.getElementById('kitsExtras');
 
   const btnAddExtraPoints = document.getElementById('addExtraPoints');
   const extraPointsContainer = document.getElementById('extra-points');
