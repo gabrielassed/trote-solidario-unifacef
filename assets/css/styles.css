@@ -18,6 +18,80 @@ hr {
   margin: 10px 0px;
 }
 
+#switch-theme {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+label[for="switch-theme"] {
+  width: 60px;
+  height: 24px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 24px;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.4), inset 0px -2px 5px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+label[for="switch-theme"]:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 20px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+label[for="switch-theme"]:active:after {
+  width: 32px;
+}
+
+label[for="switch-theme"] ion-icon {
+  position: absolute;
+  width: 20px;
+  top: 0;
+  z-index: 100;
+}
+
+label[for="switch-theme"] .sun {
+  top: 3px;
+  left: 2px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+label[for="switch-theme"] .moon {
+  top: 4px;
+  left: 38px;
+  color: #7e7e7e;
+  transition: 0.3s;
+}
+
+#switch-theme:checked + label {
+  background: #242424;
+}
+
+#switch-theme:checked + label:after {
+  left: 58px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+#switch-theme:checked + label .sun {
+  color: #7e7e7e;
+}
+
+#switch-theme:checked + label .moon {
+  color: #fff;
+}
+
 .inner-nav {
   margin: 0 auto;
   width: 75%;
