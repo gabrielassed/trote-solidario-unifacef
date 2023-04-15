@@ -59,8 +59,12 @@ body {
 }
 
 .carousel {
-  width: 90%;
+  width: 75%;
+  max-width: 1000px;
   margin: 10px auto;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .content {
