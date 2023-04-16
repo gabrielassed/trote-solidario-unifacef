@@ -6,16 +6,49 @@
   font-family: 'Inter', sans-serif;
 }
 
+:root {
+  --nav-color: #add8e6;
+  --text-color: #000000;
+  --active-color: blue;
+  --background-color: #ffffff;
+  --link-color: #0707b4;
+
+  --callout-color: #dbe5f1;
+  --striped-color: #c0c0c0;
+  --callout-lightyellow-color: #edefd5;
+}
+
+.dark {
+  --nav-color: #1b4958;
+  --text-color: #e8e6e3;
+  --active-color: #327af5;
+  --background-color: #181a1b;
+  --link-color: #328ffb;
+
+  --callout-color: #26292b;
+  --striped-color: #3c4143;
+  --callout-lightyellow-color: #2d2f12;
+
+  --btn-background: #7b7b7b;
+  --btn-text: #ffffff;
+
+  --input-background: #3b3b3b;
+}
+
 nav {
   width: 100%;
   height: 100px;
-  background-color: lightblue;
+  background-color: var(--nav-color);
   box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.1);
 }
 
 hr {
   width: 100%;
   margin: 10px 0px;
+}
+
+input {
+  background-color: var(--input-background);
 }
 
 #switch-theme {
@@ -113,16 +146,16 @@ label[for="switch-theme"] .moon {
 .inner-nav a {
   text-decoration: none;
   font-size: 24px;
-  color: black;
+  color: var(--text-color);
 }
 
 .inner-nav a:hover {
-  color: blue;
+  color: var(--active-color);
   transition: all 0.1s;
 }
 
 .inner-nav a.active {
-  color: blue;
+  color: var(--active-color);
 }
 
 body {
@@ -130,13 +163,18 @@ body {
   background-attachment: fixed;
   background-size: cover;
   backdrop-filter: blur(4px);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
 }
 
 .carousel {
   width: 75%;
   max-width: 1000px;
   margin: 10px auto;
-  background-color: white;
+  background-color: var(--background-color);
   padding: 10px;
   border-radius: 10px;
 }
@@ -145,7 +183,7 @@ body {
   max-width: 800px;
   margin: 10px auto;
 
-  background-color: white;
+  background-color: var(--background-color);
   padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -187,13 +225,13 @@ body {
 }
 
 .content tbody.striped tr:nth-child(odd) {
-  background-color: #c0c0c0;
+  background-color: var(--striped-color);
 }
 
 .content table td,
 .content table th {
   padding: 20px 30px;
-  border: 1px solid black;
+  border: 1px solid var(--text-color);
 }
 
 .content table th {
@@ -233,14 +271,14 @@ body {
 }
 
 .content .callout {
-  background-color: #dbe5f1;
+  background-color: var(--callout-color);
   padding: 10px 30px;
-  border: 1px solid black;
+  border: 1px solid var(--text-color);
   border-radius: 5px;
 }
 
 .content .callout.lightyellow {
-  background-color: #edefd5;
+  background-color: var(--callout-lightyellow-color);
 }
 
 .calculator h2 {
@@ -297,10 +335,13 @@ body {
 .calculator .button {
   font-size: 16px;
   padding: 2px 3px;
+
+  color: var(--btn-text);
+  background-color: var(--btn-background);
 }
 
 footer {
-  background-color: lightblue;
+  background-color: var(--nav-color);
   padding: 30px;
   box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.1);
 }
@@ -323,7 +364,7 @@ footer {
 
 .inner-footer .social-links a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   font-size: 24px;
 }
 
